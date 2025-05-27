@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NOBU Match - 大人のためのプレミアムマッチングアプリ
 
-## Getting Started
+洗練された大人のための上質な出会いを提供するプレミアムマッチングアプリです。
 
-First, run the development server:
+## 🌟 特徴
+
+- **厳正な審査**: 全メンバーの身元確認と独自の審査基準
+- **AIマッチング**: 高度なAIアルゴリズムによる最適なパートナー提案
+- **完全なプライバシー**: 最新のセキュリティ技術による個人情報保護
+- **プレミアムUI**: ゴールドアクセントの高級感あるデザイン
+
+## 🚀 デモ
+
+[Live Demo](https://nobu-match.vercel.app/)
+
+## 💻 技術スタック
+
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS
+- **Authentication**: Supabase Auth
+- **Form Handling**: React Hook Form + Zod
+- **Deployment**: Vercel
+
+## 🛠️ セットアップ
 
 ```bash
+# リポジトリをクローン
+git clone https://github.com/ryouryout/nobu-match.git
+
+# ディレクトリに移動
+cd nobu-match
+
+# 依存関係をインストール
+npm install
+
+# 環境変数を設定（.env.localファイルを作成）
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# 開発サーバーを起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 主な画面
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **ランディングページ**: プレミアムなブランディングとCTA
+2. **新規登録**: 年齢確認と性別選択を含む登録フォーム
+3. **ログイン**: メール/パスワードまたはGoogleアカウント
+4. **ダッシュボード**: スワイプ式のマッチング機能
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 デザインシステム
 
-## Learn More
+- **カラーパレット**:
+  - ゴールド: #D4AF37
+  - ダークゴールド: #B8941B
+  - ブラック: #0A0A0A
+  - グレー階調: #F9FAFB ~ #111827
 
-To learn more about Next.js, take a look at the following resources:
+- **フォント**:
+  - 本文: Inter
+  - 見出し: Playfair Display
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 ライセンス
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+MIT
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by NOBU Match Team
