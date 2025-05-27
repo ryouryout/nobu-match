@@ -11,15 +11,16 @@
 
 ## 🚀 デモ
 
-[Live Demo](https://nobu-match.vercel.app/)
+[GitHub Repository](https://github.com/ryouryout/nobu-match)
 
 ## 💻 技術スタック
 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **Styling**: Tailwind CSS
-- **Authentication**: Supabase Auth
+- **UI Components**: Radix UI
+- **Animation**: Framer Motion
+- **Icons**: Lucide React
 - **Form Handling**: React Hook Form + Zod
-- **Deployment**: Vercel
 
 ## 🛠️ セットアップ
 
@@ -41,12 +42,25 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 npm run dev
 ```
 
-## 📱 主な画面
+## 📱 主な機能
 
-1. **ランディングページ**: プレミアムなブランディングとCTA
-2. **新規登録**: 年齢確認と性別選択を含む登録フォーム
-3. **ログイン**: メール/パスワードまたはGoogleアカウント
-4. **ダッシュボード**: スワイプ式のマッチング機能
+1. **洗練されたランディングページ**: 
+   - ヒーローセクションの自動画像切り替え
+   - スクロールアニメーション
+   - 料金プランと成功事例
+   
+2. **リッチなUIコンポーネント**:
+   - カスタムボタンバリアント
+   - グラデーション効果
+   - グラスモーフィズム
+   
+3. **認証システム**:
+   - 新規登録フォーム
+   - ログイン機能
+   
+4. **マッチング機能**:
+   - プロフィール表示
+   - スワイプインターフェース
 
 ## 🎨 デザインシステム
 
