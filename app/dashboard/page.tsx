@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase-client';
 import Image from 'next/image';
 
 interface Profile {
@@ -29,6 +29,8 @@ export default function DashboardPage() {
   }, []);
 
   const checkAuth = async () => {
+    const supabase = getSupabase();
+    if (!supabase) return;
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
       router.push('/login');
@@ -86,7 +88,10 @@ export default function DashboardPage() {
   };
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
+    const supabase = getSupabase();
+    if (supabase) {
+      await supabase.auth.signOut();
+    }
     router.push('/');
   };
 

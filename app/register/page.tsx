@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { supabase } from '@/lib/supabase';
+import { getSupabase } from '@/lib/supabase-client';
 
 const registerSchema = z.object({
   email: z.string().email('有効なメールアドレスを入力してください'),
@@ -41,6 +41,11 @@ export default function RegisterPage() {
     setError(null);
 
     try {
+      const supabase = getSupabase();
+      if (!supabase) {
+        setError('認証システムの初期化中です');
+        return;
+      }
       const { error: signUpError } = await supabase.auth.signUp({
         email: data.email,
         password: data.password,
